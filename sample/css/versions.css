@@ -19,6 +19,7 @@
 
 -------------------------------------------------------------------*/
 
+
 /*------------------------------------------------------------------
     1. POLITICS VERSION
 -------------------------------------------------------------------*/
@@ -43,13 +44,13 @@ GRADIENTS
 **************************************/
 
 body.politics_version .icon_wrap:hover,
-body.politics_version .nav-pills > li.active > a,
-body.politics_version .nav-pills > li.active > a:focus,
-body.politics_version .nav-pills > li.active > a:hover,
+body.politics_version .nav-pills>li.active>a,
+body.politics_version .nav-pills>li.active>a:focus,
+body.politics_version .nav-pills>li.active>a:hover,
 body.politics_version .icon-wrapper:hover i,
 body.politics_version .grd1 {
     color: #ffffff;
-    background: #f44336;    
+    background: #f44336;
 }
 
 body.politics_version .icon_wrap,
@@ -57,11 +58,11 @@ body.politics_version .dmtop:hover,
 body.politics_version .cac:hover,
 body.politics_version .features-right li:hover i,
 body.politics_version .features-left li:hover i,
-body.politics_version .nav-pills > li:hover > a,
-body.politics_version .nav-pills > li:focus > a,
-body.politics_version .nav-pills > li.active > a,
-body.politics_version .nav-pills > li.active > a:focus,
-body.politics_version .nav-pills > li.active > a:hover,
+body.politics_version .nav-pills>li:hover>a,
+body.politics_version .nav-pills>li:focus>a,
+body.politics_version .nav-pills>li.active>a,
+body.politics_version .nav-pills>li.active>a:focus,
+body.politics_version .nav-pills>li.active>a:hover,
 body.politics_version .divider-bar,
 body.politics_version .owl-next:hover i,
 body.politics_version .owl-prev:hover i,
@@ -105,11 +106,11 @@ body.politics_version .first-section i {
 }
 
 body.politics_version .header_style_01 {
-    top: 43px;
+    /* top: 43px; */
     background-color: rgba(255, 255, 255, 1);
 }
 
-body.politics_version .header_style_01 .navbar-default .navbar-nav > li > a {
+body.politics_version .header_style_01 .navbar-default .navbar-nav>li>a {
     text-transform: uppercase;
 }
 
@@ -190,8 +191,8 @@ body.politics_version .participate-wrap small {
 
 body.politics_version .participate-wrap h4 {
     padding-bottom: 10px;
-	font-size: 20px;
-	font-weight: 600;
+    font-size: 20px;
+    font-weight: 600;
 }
 
 body.politics_version .fullmagnifier {
@@ -234,4 +235,3 @@ body.politics_version .btn {
 body.politics_version .copyrights {
     background-color: #010101;
 }
-
