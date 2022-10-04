@@ -808,7 +808,7 @@ jQuery(function ($) {
     
     if( $('#countdown_block').length > 0 ) {
     
-        $('#countdown_block').countdown('2023/10/10', function (event) {
+        $('#countdown_block').countdown('2023/02/26', function (event) {
             var $this = $(this).html(event.strftime(''
                     + '<div class="countdown_container"><h2 class="count_number">%D</h2><span class="count_text">Days</span></div>'
                     + '<div class="countdown_container"><h2 class="count_number">%H</h2><span class="count_text">Hours</span></div>'
