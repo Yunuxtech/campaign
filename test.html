@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+      }
+
+      .active,
+      .collapsible:hover {
+        background-color: #555;
+      }
+
+      .collapsible:after {
+        content: "\002B";
+        color: white;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+      }
+
+      .active:after {
+        content: "\2212";
+      }
+
+      .content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: #f1f1f1;
+      }
+    </style>
+  </head>
+  <body>
+
+    <p>Lokoja LGA</p>
+    <button class="collapsible">Lokoja LGA</button>
+    <div class="content">
+      <p>Lokoja LGA Below</p>
+      <button class="collapsible">Lokoja 1</button>
+      <div class="content">
+        <p>Wards under Lokoja 1</p>
+
+        <!-- wards under lokoja 1 -->
+        <button class="collapsible">Ward A</button>
+        <div class="content">
+          <p>Ward A</p>
+        </div>
+        <button class="collapsible">Ward B</button>
+        <div class="content">
+          <p>Ward B</p>
+        </div>
+        <button class="collapsible">Ward C</button>
+        <div class="content">
+          <p>Ward C</p>
+        </div>
+        <button class="collapsible">Ward D</button>
+        <div class="content">
+          <p>Ward D</p>
+        </div>
+        <button class="collapsible">Ward E</button>
+        <div class="content">
+          <p>Ward E</p>
+        </div>
+
+        <!-- end of wards -->
+      </div>
+
+      <button class="collapsible">Lokoja 2</button>
+      <div class="content">
+        <p>Wards under Lokoja 2</p>
+
+        <!-- wards under lokoja 1 -->
+
+        <button class="collapsible">Kupa North East</button>
+        <div class="content">
+          <p>Kupa North East</p>
+        </div>
+        <button class="collapsible">Kupa South East</button>
+        <div class="content">
+          <p>Kupa South East</p>
+        </div>
+        <button class="collapsible">Oworo</button>
+        <div class="content">
+          <p>Oworo</p>
+        </div>
+        <button class="collapsible">Kakanda</button>
+        <div class="content">
+          <p>Kakanda</p>
+        </div>
+        <button class="collapsible">Eggan</button>
+        <div class="content">
+          <p>Eggan</p>
+        </div>
+
+        <!-- end -->
+      </div>
+    </div>
+
+    <p>Kogi LGA</p>
+
+    <button class="collapsible">Kogi LGA</button>
+    <div class="content">
+      <p>Kogi wards</p>
+
+      <!-- Kogi Wards -->
+
+      <button class="collapsible">Ukwo-Koton Karfe</button>
+      <div class="content">
+        <p>Ukwo-Koton Karfe</p>
+      </div>
+      <button class="collapsible">Odaki-Koton Karfe</button>
+      <div class="content">
+        <p>Odaki-Koton Karfe</p>
+      </div>
+      <button class="collapsible">Kotonkarfe South East</button>
+      <div class="content">
+        <p>Kotonkarfe South East</p>
+      </div>
+      <button class="collapsible">Girinya</button>
+      <div class="content">
+        <p>Girinya</p>
+      </div>
+      <button class="collapsible">Irenodu</button>
+      <div class="content">
+        <p>Irenodu</p>
+      </div>
+      <button class="collapsible">Akpasu</button>
+      <div class="content">
+        <p>Akpasu</p>
+      </div>
+      <button class="collapsible">Tawari</button>
+      <div class="content">
+        <p>Tawari</p>
+      </div>
+      <button class="collapsible">Gegu-Beki North</button>
+      <div class="content">
+        <p>Gegu-Beki North</p>
+      </div>
+      <button class="collapsible">Gegu-Beki South</button>
+      <div class="content">
+        <p>Gegu-Beki South</p>
+      </div>
+      <button class="collapsible">Chikara North</button>
+      <div class="content">
+        <p>Chikara North</p>
+      </div>
+      <button class="collapsible">Gegu-Beki South</button>
+      <div class="content">
+        <p>Gegu-Beki South</p>
+      </div>
+    </div>
+    <!-- end -->
+    <script>
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+          } else {
+            var childrensHeight = Array.from(
+              content.querySelectorAll(".content")
+            ).reduce(
+              (accumulator, currentValue) =>
+                accumulator + currentValue.scrollHeight,
+              0
+            );
+            content.style.maxHeight =
+              content.scrollHeight + childrensHeight + "px";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
